@@ -34,7 +34,12 @@ public class DriveConstants {
      * MOTOR_VELO_PID with the tuned coefficients from DriveVelocityPIDTuner.
      */
     public static final boolean RUN_USING_ENCODER = true;
-    public static final PIDCoefficients MOTOR_VELO_PID = null;
+
+    /*
+     * The robot default PID is (2, 0.5, 0). Do not set kP higher than 10, because it may bring too
+     * much torch to the robot and break the axle, which Brian experienced on 12/25.
+     */
+    public static final PIDCoefficients MOTOR_VELO_PID = new PIDCoefficients(2, 0.5, 0);
 
     /*
      * These are physical constants that can be determined from your robot (including the track
