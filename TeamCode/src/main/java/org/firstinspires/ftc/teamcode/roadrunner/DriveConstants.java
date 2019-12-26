@@ -39,7 +39,7 @@ public class DriveConstants {
      * The robot default PID is (2, 0.5, 0). Do not set kP higher than 10, because it may bring too
      * much torch to the robot and break the axle, which Brian experienced on 12/25.
      */
-    public static final PIDCoefficients MOTOR_VELO_PID = new PIDCoefficients(2, 0.5, 0);
+    public static final PIDCoefficients MOTOR_VELO_PID = new PIDCoefficients(20, 0.5, 12);
 
     /*
      * These are physical constants that can be determined from your robot (including the track
@@ -51,7 +51,7 @@ public class DriveConstants {
      */
     public static double WHEEL_RADIUS = 2;
     public static double GEAR_RATIO = 2; // output (wheel) speed / input (motor) speed
-    public static double TRACK_WIDTH = 14.3; //around 14.3 for hard floor, 15.3 for our black tiles
+    public static double TRACK_WIDTH = 14.45; //around 14.3 for hard floor, 15.3 for our black tiles
 
     /*
      * These are the feedforward parameters used to model the drive motor behavior. If you are using
