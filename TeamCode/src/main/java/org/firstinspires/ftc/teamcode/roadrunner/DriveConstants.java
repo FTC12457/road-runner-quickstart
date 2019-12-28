@@ -51,7 +51,7 @@ public class DriveConstants {
      */
     public static double WHEEL_RADIUS = 2;
     public static double GEAR_RATIO = 2; // output (wheel) speed / input (motor) speed
-    public static double TRACK_WIDTH = 14.45; //around 14.3 for hard floor, 15.3 for our black tiles
+    public static double TRACK_WIDTH = 14.85; //around 14.3 for hard floor, 15.3 for our black tiles
 
     /*
      * These are the feedforward parameters used to model the drive motor behavior. If you are using
@@ -59,7 +59,7 @@ public class DriveConstants {
      * motor encoders or have elected not to use them for velocity control, these values should be
      * empirically tuned.
      */
-    public static double kV = 1.0 / rpmToVelocity(getMaxRpm());
+    public static double kV = 1 / rpmToVelocity(getMaxRpm());
     public static double kA = 0;
     public static double kStatic = 0;
 
